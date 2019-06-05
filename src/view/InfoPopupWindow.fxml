@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="250.0" style="-fx-background-color: #d4d4d4; -fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InfoPopupController">
+   <children>
+      <Pane layoutX="24.0" layoutY="87.0" prefHeight="165.0" prefWidth="200.0">
+         <children>
+            <JFXTextField fx:id="colorNameField" editable="false" layoutX="35.0" layoutY="68.0" promptText="COLOR NAME">
+               <font>
+                  <Font name="Symbol" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="rgbField" editable="false" layoutX="35.0" layoutY="93.0" promptText="RGB">
+               <font>
+                  <Font name="Symbol" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="hexField" editable="false" layoutX="35.0" layoutY="118.0" promptText="HEX">
+               <font>
+                  <Font name="Symbol" size="12.0" />
+               </font>
+            </JFXTextField>
+            <Text fx:id="title" layoutX="85.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="#0">
+               <font>
+                  <Font name="Symbol" size="23.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="colorHueField" editable="false" layoutX="35.0" layoutY="43.0" promptText="COLOR HUE" text="COLOR HUE">
+               <font>
+                  <Font name="Symbol" size="12.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Pane fx:id="topBar" onMouseDragged="#dragStage" onMousePressed="#getOffset" prefHeight="83.0" prefWidth="250.0" style="-fx-border-color: black;">
+         <children>
+            <ImageView fx:id="closeButton" layoutX="208.0" layoutY="14.0" onMouseClicked="#closeButtonClicked" onMouseEntered="#closeButtonEnter" onMouseExited="#closeButtonRestore" onMousePressed="#closeButtonPressed" onMouseReleased="#closeButtonRestore" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/close.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="minimizeButton" layoutX="174.0" layoutY="14.0" onMouseClicked="#minimizeButtonClicked" onMouseEntered="#minimizeButtonEnter" onMouseExited="#minimizeButtonRestore" onMousePressed="#minimizeButtonPressed" onMouseReleased="#minimizeButtonRestore" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/minimize.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #8b8589; -fx-stroke: #353335; -fx-stroke-width: 1px;" text="C">
+               <font>
+                  <Font name="SansSerif Regular" size="64.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

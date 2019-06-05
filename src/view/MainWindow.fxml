@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="rootPane" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #d4d4d4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+  <children>
+    <AnchorPane maxHeight="-1.0" prefHeight="382.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
+      <children>
+            <VBox layoutX="14.0" layoutY="92.0" prefHeight="284.0" prefWidth="166.0">
+               <children>
+                  <JFXButton fx:id="homeButton" alignment="BOTTOM_LEFT" prefHeight="47.0" prefWidth="169.0" style="-fx-background-color: #8b8589;" text="Home">
+                     <font>
+                        <Font name="Verdana Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="schemesButton" alignment="BOTTOM_LEFT" onMouseClicked="#switchToSchemes" prefHeight="47.0" prefWidth="170.0" text="Schemes">
+                     <font>
+                        <Font name="Verdana Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/scheme.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children></VBox>
+            <Pane fx:id="topBar" onMouseDragged="#dragStage" onMousePressed="#getOffset" prefHeight="83.0" prefWidth="700.0" style="-fx-background-color: #534b4f;">
+               <children>
+                  <ImageView fx:id="closeButton" layoutX="658.0" layoutY="8.0" onMouseClicked="#closeButtonClicked" onMouseEntered="#closeButtonEnter" onMouseExited="#closeButtonRestore" onMousePressed="#closeButtonPressed" onMouseReleased="#closeButtonRestore" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/close.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="minimizeButton" layoutX="624.0" layoutY="8.0" onMouseClicked="#minimizeButtonClicked" onMouseEntered="#minimizeButtonEnter" onMouseExited="#minimizeButtonRestore" onMousePressed="#minimizeButtonPressed" onMouseReleased="#minimizeButtonRestore" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/minimize.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #8b8589; -fx-stroke: #353335; -fx-stroke-width: 1px;" text="C">
+                     <font>
+                        <Font name="SansSerif Regular" size="64.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="214.0" layoutY="92.0" prefHeight="300.0" prefWidth="444.0">
+               <children>
+                  <JFXTextField fx:id="colorHueField" editable="false" layoutX="171.0" layoutY="52.0" promptText="COLOR HUE" text="COLOR HUE">
+                     <font>
+                        <Font name="Symbol" size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="rgbField" editable="false" layoutX="171.0" layoutY="102.0" promptText="RGB">
+                     <font>
+                        <Font name="Symbol" size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="hexField" editable="false" layoutX="171.0" layoutY="127.0" promptText="HEX">
+                     <font>
+                        <Font name="Symbol" size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label layoutX="156.0" layoutY="14.0" text="EYE DROPPER">
+                     <font>
+                        <Font name="Verdana Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="grabButton" layoutX="205.0" layoutY="167.0" mnemonicParsing="false" onAction="#grabColor" style="-fx-padding: 8 15 15 15; -fx-background-insets: 0,0 0  5 0, 0 0 6 0, 0 0 7 0; -fx-background-radius: 8; -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #8e895c 0%, #8e895c 100%), #8e895c, #8e895c, radial-gradient(center 50% 50%, radius 100%, #ccc270, #ccc270); -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 ); -fx-font-weight: bold; -fx-font-size: 1.1em;" text="GRAB">
+                     <font>
+                        <Font name="Symbol" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </Button>
+                  <JFXTextField fx:id="colorNameField" editable="false" layoutX="171.0" layoutY="77.0" promptText="COLOR NAME">
+                     <font>
+                        <Font name="Symbol" size="12.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </Pane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

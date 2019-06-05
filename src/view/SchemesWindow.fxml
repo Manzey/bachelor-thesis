@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #d4d4d4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SchemesController">
+  <children>
+    <AnchorPane maxHeight="-1.0" prefHeight="382.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
+      <children>
+            <VBox layoutX="14.0" layoutY="92.0" prefHeight="315.0" prefWidth="201.0">
+               <children>
+                  <JFXButton fx:id="homeButton" alignment="BOTTOM_LEFT" onMouseClicked="#switchToHome" prefHeight="47.0" prefWidth="169.0" text="Home">
+                     <font>
+                        <Font name="Verdana Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="schemesButton" alignment="BOTTOM_LEFT" prefHeight="47.0" prefWidth="170.0" style="-fx-background-color: #8b8589;" text="Schemes">
+                     <font>
+                        <Font name="Verdana Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/scheme.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Pane fx:id="topBar" onMouseDragged="#dragStage" onMousePressed="#getOffset" prefHeight="83.0" prefWidth="700.0" style="-fx-background-color: #534b4f;">
+               <children>
+                  <ImageView fx:id="closeButton" layoutX="658.0" layoutY="8.0" onMouseClicked="#closeButtonClicked" onMouseEntered="#closeButtonEnter" onMouseExited="#closeButtonRestore" onMousePressed="#closeButtonPressed" onMouseReleased="#closeButtonRestore" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/close.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="minimizeButton" layoutX="624.0" layoutY="8.0" onMouseClicked="#minimizeButtonClicked" onMouseEntered="#minimizeButtonEnter" onMouseExited="#minimizeButtonRestore" onMousePressed="#minimizeButtonPressed" onMouseReleased="#minimizeButtonRestore" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/minimize.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #8b8589; -fx-stroke: #353335; -fx-stroke-width: 1px;" text="C">
+                     <font>
+                        <Font name="SansSerif Regular" size="64.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="214.0" layoutY="92.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="444.0">
+               <children>
+                  <Label layoutX="176.0" layoutY="14.0" text="SCHEMES">
+                     <font>
+                        <Font name="Verdana Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Pane id="box1" fx:id="colorBox1" layoutX="63.0" layoutY="202.0" onMouseClicked="#colorBox1Click" prefHeight="59.0" prefWidth="64.0" style="-fx-background-color: white; -fx-border-color: black;" styleClass="hoverEffect" stylesheets="@bootstrap3.css" />
+                  <Pane id="box2" fx:id="colorBox2" layoutX="133.0" layoutY="202.0" onMouseClicked="#colorBox2Click" prefHeight="59.0" prefWidth="64.0" style="-fx-background-color: white; -fx-border-color: black;" styleClass="hoverEffect" stylesheets="@bootstrap3.css" />
+                  <Pane id="box3" fx:id="colorBox3" layoutX="203.0" layoutY="202.0" onMouseClicked="#colorBox3Click" prefHeight="59.0" prefWidth="64.0" style="-fx-background-color: white; -fx-border-color: black;" styleClass="hoverEffect" stylesheets="@bootstrap3.css" />
+                  <Pane id="box4" fx:id="colorBox4" layoutX="273.0" layoutY="202.0" onMouseClicked="#colorBox4Click" prefHeight="59.0" prefWidth="64.0" style="-fx-background-color: white; -fx-border-color: black;" styleClass="hoverEffect" stylesheets="@bootstrap3.css" />
+                  <Pane id="box5" fx:id="colorBox5" layoutX="343.0" layoutY="202.0" onMouseClicked="#colorBox5Click" prefHeight="59.0" prefWidth="64.0" style="-fx-background-color: white; -fx-border-color: black;" styleClass="hoverEffect" stylesheets="@bootstrap3.css" />
+                  <Button fx:id="generateButton" layoutX="109.0" layoutY="140.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#setColors" prefHeight="42.0" prefWidth="100.0" style="-fx-padding: 8 15 15 15; -fx-background-insets: 0,0 0  5 0, 0 0 6 0, 0 0 7 0; -fx-background-radius: 8; -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #8e895c 0%, #8e895c 100%), #8e895c, #8e895c, radial-gradient(center 50% 50%, radius 100%, #ccc270, #ccc270); -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );" text="GENERATE" textOverrun="CLIP" wrapText="true">
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <ColorPicker fx:id="colorPicker" layoutX="312.0" layoutY="16.0" />
+                  <ChoiceBox fx:id="schemaBox" layoutX="158.0" layoutY="42.0" prefWidth="150.0" />
+                  <JFXTextField fx:id="colorNameField" editable="false" layoutX="163.0" layoutY="102.0" promptText="COLOR NAME">
+                     <font>
+                        <Font name="Symbol" size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="schemeColor1" editable="false" layoutX="67.0" layoutY="261.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#copyContent" prefHeight="25.0" prefWidth="55.0" text="HEX">
+                     <font>
+                        <Font size="9.0" />
+                     </font></JFXTextField>
+                  <JFXTextField fx:id="schemeColor2" editable="false" layoutX="136.0" layoutY="261.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#copyContent" onMouseClicked="#copyContent" prefHeight="25.0" prefWidth="55.0" text="HEX">
+                     <font>
+                        <Font size="10.0" />
+                     </font></JFXTextField>
+                  <JFXTextField fx:id="schemeColor3" editable="false" layoutX="207.0" layoutY="261.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#copyContent" onMouseClicked="#copyContent" prefHeight="25.0" prefWidth="55.0" text="HEX">
+                     <font>
+                        <Font size="10.0" />
+                     </font></JFXTextField>
+                  <JFXTextField fx:id="schemeColor4" editable="false" layoutX="276.0" layoutY="261.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#copyContent" onMouseClicked="#copyContent" prefHeight="25.0" prefWidth="55.0" text="HEX">
+                     <font>
+                        <Font size="10.0" />
+                     </font></JFXTextField>
+                  <JFXTextField fx:id="schemeColor5" editable="false" layoutX="346.0" layoutY="261.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#copyContent" onMouseClicked="#copyContent" prefHeight="25.0" prefWidth="55.0" text="HEX">
+                     <font>
+                        <Font size="10.0" />
+                     </font></JFXTextField>
+                  <Button fx:id="previewButton1" layoutX="259.0" layoutY="140.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#previewScheme" prefHeight="42.0" prefWidth="100.0" style="-fx-padding: 8 15 15 15; -fx-background-insets: 0,0 0  5 0, 0 0 6 0, 0 0 7 0; -fx-background-radius: 8; -fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #8e895c 0%, #8e895c 100%), #8e895c, #8e895c, radial-gradient(center 50% 50%, radius 100%, #ccc270, #ccc270); -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );" text="PREVIEW">
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </Button>
+                  <JFXTextField fx:id="colorHueField" editable="false" layoutX="164.0" layoutY="74.0" promptText="COLOR HUE" text="COLOR HUE">
+                     <font>
+                        <Font name="Symbol" size="12.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </Pane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

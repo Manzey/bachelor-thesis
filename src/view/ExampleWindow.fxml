@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ExampleController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Pane fx:id="example1" onMouseDragged="#dragStage" onMousePressed="#getOffset" prefHeight="100.0" prefWidth="640.0" style="-fx-background-color: red;">
+               <children>
+                  <Text fx:id="titleText" layoutX="270.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-stroke: black; -fx-stroke-width: 1px; -fx-fill: white;" text="Title">
+                     <font>
+                        <Font name="Sitka Text" size="46.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="closeButton" fitHeight="53.0" fitWidth="40.0" layoutX="569.0" layoutY="29.0" onMouseClicked="#closeButtonClicked" onMouseEntered="#closeButtonEnter" onMouseExited="#closeButtonRestore" onMousePressed="#closeButtonPressed" onMouseReleased="#closeButtonRestore" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/close.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="example4" layoutY="100.0" prefHeight="305.0" prefWidth="132.0" style="-fx-background-color: blue;">
+               <children>
+                  <JFXButton fx:id="example3" prefHeight="53.0" prefWidth="132.0" style="-fx-background-color: yellow;" text="Home">
+                     <font>
+                        <Font name="Sitka Heading" size="25.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <JFXTextArea fx:id="example2" layoutX="132.0" layoutY="100.0" prefHeight="215.0" prefWidth="508.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor &#10;incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat&#10; diam ut venenatis. Placerat in egestas erat imperdiet. Et netus et malesuada fames ac &#10;turpis. Vel elit scelerisque mauris pellentesque. Lobortis scelerisque fermentum dui &#10;faucibus in ornare quam viverra orci. In hac habitasse platea dictumst quisque sagittis &#10;purus. Tellus in metus vulputate eu scelerisque felis imperdiet. Bibendum at varius vel &#10;pharetra vel turpis nunc eget. Donec enim diam vulputate ut pharetra. Neque egestas&#10; congue quisque egestas diam. Vel eros donec ac odio tempor orci dapibus ultrices.&#10; Integer quis auctor elit sed vulputate mi sit amet. Laoreet non curabitur gravida arcu. &#10;Est placerat in egestas erat. Nullam ac tortor vitae purus faucibus ornare. Bibendum neque egestas congue quisque egestas diam in arcu. Vestibulum sed arcu non odio." />
+            <JFXButton fx:id="example5" layoutX="292.0" layoutY="325.0" prefHeight="46.0" prefWidth="185.0" style="-fx-background-color: green;" text="Magical example button">
+               <font>
+                  <Font name="Sitka Heading" size="16.0" />
+               </font>
+            </JFXButton>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
