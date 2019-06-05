@@ -1,16 +1,11 @@
 # Colorify
 
-## [A link to the survey where you can express your feelings for the demo!](https://docs.google.com/forms/d/1fh10gxktbsRN4H5RpsX-Epsh3Cg_-GrvUz59MFXJVf4/edit)  
-If you have any questions or concerns, email me at dl222is@student.lnu.se
-
 ## About me
 Hello guys and gals!
 
 I am a 24 year old guy from Sweden that's currently studying Computer Science. For my bachelor thesis I've been investigating and trying to solve some issues that might arise for color blind programmers. Especially when they are working with designing of applications.
 
 For the thesis I created a tool that can assist colorblind people, but mainly focused on developers! The tool includes some features to grab a color from the screen and receive information about it. (RGB, HEX and a readable, understandable color name). Also functionality for generating color schemes and previewing them in a mocked up application!
-
-And now as a part of the thesis I need to investigate and see if this application is of assistance to colorblind developers. So if you're working as a developer, studying as a developer or simply just develop and are colorblind, please take a couple of minutes to try my application out and fill out the survey! It would help a lot.
 
 ## The tool
 
